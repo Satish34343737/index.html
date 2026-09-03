@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ace Point Home Tuition | Manpada, Thane</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#172033;background:#f7f9fc}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:white;position:sticky;top:0;z-index:5;box-shadow:0 2px 12px #00000012}
+.logo{font-size:22px;font-weight:800;color:#155eef}.btn{background:#155eef;color:white;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
+.hero{padding:70px 7%;background:linear-gradient(135deg,#eef5ff,#ffffff)}
+.hero h1{font-size:46px;max-width:700px;margin:0 0 18px}.hero p{font-size:19px;line-height:1.6;max-width:650px}.tag{display:inline-block;background:#dce9ff;color:#155eef;padding:8px 12px;border-radius:999px;font-weight:700;margin-bottom:16px}
+section{padding:55px 7%}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:white;padding:24px;border-radius:16px;box-shadow:0 5px 20px #0000000b}.card h3{margin-top:8px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.aboutbox{background:#155eef;color:white;padding:35px;border-radius:20px}
+form{max-width:650px;background:white;padding:28px;border-radius:18px;box-shadow:0 5px 20px #0000000b}input,select,textarea{width:100%;padding:13px;margin:8px 0 14px;border:1px solid #d6dbe5;border-radius:9px;font-size:16px}button{border:0;cursor:pointer}
+footer{padding:30px 7%;background:#111827;color:white;text-align:center}
+@media(max-width:800px){.grid{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.hero h1{font-size:36px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{padding-top:45px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">Ace Point Home Tuition</div><a class="btn" href="#enquiry">Enquire Now</a></nav>
+
+<header class="hero">
+<span class="tag">Home Tuition • Manpada, Thane</span>
+<h1>Ace Point Home Tuition</h1>
+<h2 style="font-size:28px;margin:0 0 12px;color:#155eef">Learn from an MBBS Student 🩺📚</h2>
+<p><b>PCMB Home Tuition | Classes 9th–12th | Manpada, Thane</b></p>
+<p>Personalised home tutoring in <b>Physics, Chemistry, Mathematics & Biology</b>, with a special focus on clear concepts, exam preparation and doubt solving.</p>
+<a class="btn" href="#enquiry">Book a Trial / Enquiry</a>
+</header>
+
+<section>
+<h2>What I Teach</h2>
+<div class="grid">
+<div class="card"><div>⚡</div><h3>Physics</h3><p>Concept building, numericals and exam preparation.</p></div>
+<div class="card"><div>🧪</div><h3>Chemistry</h3><p>Clear concepts, problem solving and revision.</p></div>
+<div class="card"><div>📐</div><h3>Mathematics</h3><p>Step-by-step practice and doubt solving.</p></div>
+<div class="card"><div>🧬</div><h3>Biology</h3><p>Diagrams, concepts, NCERT-focused learning and revision.</p></div>
+</div>
+</section>
+
+<section class="about">
+<div><h2>Why Choose Home Tuition?</h2>
+<p>One-to-one attention, flexible timings, regular doubt solving and a study plan based on the student's level.</p>
+<ul><li>Classes 9th–12th</li><li>PCMB subjects</li><li>Home tuition around Manpada</li><li>Regular tests & progress tracking</li></ul></div>
+<div class="aboutbox"><h2>Learn Better. Score Better.</h2><p>Focused personal attention can make difficult topics easier and help students stay consistent.</p></div>
+</section>
+
+<section id="enquiry">
+<h2>Student Enquiry</h2>
+<form onsubmit="sendWhatsApp(event)">
+<label>Student Name</label><input id="name" required>
+<label>Class</label><select id="class"><option>9th</option><option>10th</option><option>11th</option><option>12th</option></select>
+<label>Subjects</label><input id="subject" placeholder="e.g. Biology / PCMB" required>
+<label>Area</label><input id="area" value="Manpada, Thane">
+<label>Message</label><textarea id="message" rows="4" placeholder="Preferred days/timings"></textarea>
+<button class="btn" type="submit">Send Enquiry on WhatsApp</button>
+</form>
+</section>
+
+<footer>© 2026 Ace Point Home Tuition • Manpada, Thane</footer>
+<script>
+function sendWhatsApp(e){
+ e.preventDefault();
+ const text=`Hello, I am interested in home tuition.%0AStudent: ${encodeURIComponent(document.getElementById('name').value)}%0AClass: ${document.getElementById('class').value}%0ASubjects: ${encodeURIComponent(document.getElementById('subject').value)}%0AArea: ${encodeURIComponent(document.getElementById('area').value)}%0AMessage: ${encodeURIComponent(document.getElementById('message').value)}`;
+ window.open('https://wa.me/?text='+text,'_blank');
+}
+</script>
+</body>
+</html>
